@@ -1,0 +1,1 @@
+BundleWithCustomLicense.exe /l uninstall.log

@@ -1,0 +1,7 @@
+﻿WiX Toolset Pills 15mg - Installer 1 - Part of the "Bundle with Custom License" project
+====================================================================================================
+
+The pill demonstrates how to display license information in the default bootstrapper application GUI.
+
+For more details please check the GitHub repository:
+https://github.com/WiX-Toolset-Pills-15mg/Bundle-with-Custom-License

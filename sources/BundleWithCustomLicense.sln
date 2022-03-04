@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BundleWithCustomLicense", "BundleWithCustomLicenseFile\BundleWithCustomLicense.wixproj", "{5DC5493D-3300-4506-AD94-8270ADFA2568}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Installer1", "Installer1\Installer1.wixproj", "{86BA0F0F-25B5-433C-95EE-2F7AAEC98410}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Installer2", "Installer2\Installer2.wixproj", "{99E92897-C9F9-4519-8C6C-157F46F96658}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DC5493D-3300-4506-AD94-8270ADFA2568}.Debug|x86.ActiveCfg = Debug|x86
+		{5DC5493D-3300-4506-AD94-8270ADFA2568}.Debug|x86.Build.0 = Debug|x86
+		{5DC5493D-3300-4506-AD94-8270ADFA2568}.Release|x86.ActiveCfg = Release|x86
+		{5DC5493D-3300-4506-AD94-8270ADFA2568}.Release|x86.Build.0 = Release|x86
+		{86BA0F0F-25B5-433C-95EE-2F7AAEC98410}.Debug|x86.ActiveCfg = Debug|x86
+		{86BA0F0F-25B5-433C-95EE-2F7AAEC98410}.Debug|x86.Build.0 = Debug|x86
+		{86BA0F0F-25B5-433C-95EE-2F7AAEC98410}.Release|x86.ActiveCfg = Release|x86
+		{86BA0F0F-25B5-433C-95EE-2F7AAEC98410}.Release|x86.Build.0 = Release|x86
+		{99E92897-C9F9-4519-8C6C-157F46F96658}.Debug|x86.ActiveCfg = Debug|x86
+		{99E92897-C9F9-4519-8C6C-157F46F96658}.Debug|x86.Build.0 = Debug|x86
+		{99E92897-C9F9-4519-8C6C-157F46F96658}.Release|x86.ActiveCfg = Release|x86
+		{99E92897-C9F9-4519-8C6C-157F46F96658}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08CA5410-30CA-4A0D-9A19-19B279AE19C9}
+	EndGlobalSection
+EndGlobal

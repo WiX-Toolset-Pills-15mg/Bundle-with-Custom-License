@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+WiX Toolset Pills 15mg
+Copyright (C) 2019-2022 Dust in the Wind
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!--
+====================================================================================================
+START: Overview
+====================================================================================================
+
+This tutorial shows the usage of the 5 different variants of the standard
+"WixStandardBootstrapperApplication":
+
+    - 1) WixStandardBootstrapperApplication.RtfLicense
+    - 2) WixStandardBootstrapperApplication.HyperlinkLicense
+    - 3) WixStandardBootstrapperApplication.HyperlinkSidebarLicense
+    - 4) WixStandardBootstrapperApplication.RtfLargeLicense
+    - 5) WixStandardBootstrapperApplication.HyperlinkLargeLicense
+
+See https://wixtoolset.org/documentation/manual/v3/bundle/wixstdba/
+
+How to use:
+    Uncomment one by one each variant, build the project and run the bundle.
+
+NEXT: Bundle.wxs (DOWN)
+-->
+
+<Wix
+    xmlns="http://schemas.microsoft.com/wix/2006/wi"
+    xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+
+    <Bundle
+        Name="Bundle With Custom License"
+        Version="1.0.0.0"
+        Manufacturer="Dust in the Wind"
+        UpgradeCode="5dc5493d-3300-4506-ad94-8270adfa2568">
+
+        <!--
+        ====================================================================================================
+        Step 1: Choose a Bootstrapper Application variant
+        ====================================================================================================
+        
+        Uncomment one of the Bootstrapper Application variants.
+        
+        NEXT: install.bat
+        -->
+
+        <!--
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        1) WixStandardBootstrapperApplication.RtfLicense
+           The first variant displays the license in the welcome dialog similar to the WixUI Advanced.
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        -->
+
+        <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+            <bal:WixStandardBootstrapperApplication
+                LicenseFile="$(var.ProjectDir)license.rtf" />
+        </BootstrapperApplicationRef>
+
+        <!--
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        2) WixStandardBootstrapperApplication.HyperlinkLicense
+           The second variant provides an optional hyperlink to the license agreement on the welcome dialog,
+           providing a more modern and streamlined look.
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        -->
+
+        <!--<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLicense">
+            <bal:WixStandardBootstrapperApplication
+                LicenseUrl="https://www.gnu.org/licenses/gpl-3.0.en.html" />
+        </BootstrapperApplicationRef>-->
+
+        <!--
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        3) WixStandardBootstrapperApplication.HyperlinkSidebarLicense
+           The third variant is based on HyperlinkLicense but provides a larger dialog and larger image on
+           the initial page.
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        -->
+
+        <!--<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkSidebarLicense">
+            <bal:WixStandardBootstrapperApplication
+                LicenseUrl="https://www.gnu.org/licenses/gpl-3.0.en.html" />
+        </BootstrapperApplicationRef>-->
+
+        <!--
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        4) WixStandardBootstrapperApplication.RtfLargeLicense
+           This variant is similar to RtfLicense but is a larger dialog and supports the option of
+           displaying the version number.
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        -->
+
+        <!--<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLargeLicense">
+            <bal:WixStandardBootstrapperApplication
+                LicenseFile="$(var.ProjectDir)license.rtf"
+                ShowVersion="yes" />
+        </BootstrapperApplicationRef>-->
+
+        <!--
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        5) WixStandardBootstrapperApplication.HyperlinkLargeLicense
+           This variant is similar to HyperlinkLicense but is a larger dialog and supports the option of
+           displaying the version number.
+        ````````````````````````````````````````````````````````````````````````````````````````````````````
+        -->
+
+        <!--<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLargeLicense">
+            <bal:WixStandardBootstrapperApplication
+                LicenseUrl="https://www.gnu.org/licenses/gpl-3.0.en.html"
+                ShowVersion="yes" />
+        </BootstrapperApplicationRef>-->
+
+        <Chain>
+            <PackageGroupRef Id="Installer1PackageGroup" />
+            <PackageGroupRef Id="Installer2PackageGroup" />
+        </Chain>
+    </Bundle>
+
+</Wix>
